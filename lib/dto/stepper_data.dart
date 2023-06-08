@@ -6,11 +6,11 @@ class StepperData {
 
   /// subtitle for the stepper
   final StepperText? subtitle;
-
+  final void Function()? onTap;
   final Widget? iconWidget;
 
   /// Use the constructor of [StepperData] to pass the data needed.
-  StepperData({this.iconWidget, this.title, this.subtitle});
+  StepperData({this.iconWidget, this.title, this.subtitle, this.onTap});
 }
 
 class StepperText {
