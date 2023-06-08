@@ -51,7 +51,7 @@ class HorizontalStepperItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      child: InkWell(
+      child: GestureDetector(
         onTap: item.onTap,
         child: Column(
           mainAxisSize: MainAxisSize.min,
