@@ -51,11 +51,14 @@ class HorizontalStepperItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment:
-            isInverted ? MainAxisAlignment.start : MainAxisAlignment.end,
-        children: isInverted ? getInvertedChildren() : getChildren(),
+      child: InkWell(
+        onTap: item.onTap,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment:
+              isInverted ? MainAxisAlignment.start : MainAxisAlignment.end,
+          children: isInverted ? getInvertedChildren() : getChildren(),
+        ),
       ),
     );
   }
