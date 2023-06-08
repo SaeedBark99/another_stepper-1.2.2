@@ -52,6 +52,7 @@ class HorizontalStepperItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
       child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
         onTap: item.onTap,
         child: Column(
           mainAxisSize: MainAxisSize.min,
