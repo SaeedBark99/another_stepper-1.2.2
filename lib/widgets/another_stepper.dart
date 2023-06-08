@@ -12,6 +12,7 @@ class AnotherStepper extends StatelessWidget {
   const AnotherStepper({
     Key? key,
     required this.stepperList,
+    required this.onTap,
     this.verticalGap = 40,
     this.activeIndex = 0,
     required this.stepperDirection,
@@ -27,6 +28,8 @@ class AnotherStepper extends StatelessWidget {
 
   /// Stepper [List] of type [StepperData] to render the Stepper on the UI with data
   final List<StepperData> stepperList;
+
+  final void Function()? onTap;
 
   /// Gap between the items in the stepper, Default = 40
   /// (Use it to give fixed height of stepper bar when using [Axis.vertical])
